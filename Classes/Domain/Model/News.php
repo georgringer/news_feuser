@@ -5,12 +5,13 @@ namespace GeorgRinger\NewsFeuser\Domain\Model;
 class News extends \GeorgRinger\News\Domain\Model\News {
 
     /**
-     * @var \TYPO3\CMS\Extbase\Domain\Model\FrontendUser
+     * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\TYPO3\CMS\Extbase\Domain\Model\FrontendUser>
+     * @lazy
      */
     protected $txNewsfeuserUser;
 
     /**
-     * @return \TYPO3\CMS\Extbase\Domain\Model\FrontendUser
+     * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage
      */
     public function getNewsFeUser()
     {
@@ -18,7 +19,7 @@ class News extends \GeorgRinger\News\Domain\Model\News {
     }
 
     /**
-     * @param \TYPO3\CMS\Extbase\Domain\Model\FrontendUser $txNewsfeuserUser
+     * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage $txNewsfeuserUser
      */
     public function setTxNewsfeuserUser($txNewsfeuserUser)
     {

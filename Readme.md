@@ -21,8 +21,12 @@ After filling out the relation, you are able to output the fe user with
 ```
 // Show the full model
 <f:debug>{newsItem.newsFeUser}</f:debug>
-// Show the name
+// Show the names
 <f:if condition="{newsItem.newsFeUser}">
-    {newsItem.newsFeUser.firstName} {newsItem.newsFeUser.lastName}
+    <ul>
+    <f:for each="{newsItem.newsFeUser}" as="user">
+        <li>{user.firstName} {user.lastName}</li>
+    </f:for>
+    </ul>
 </f:if>
 ```
