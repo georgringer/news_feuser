@@ -1,0 +1,3 @@
+
+# cat=general/enable/1; type=string; label=LLL:EXT:news_feuser/Resources/Private/Language/locallang.xlf:extMgm.variable
+variable =

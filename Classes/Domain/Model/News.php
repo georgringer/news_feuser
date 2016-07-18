@@ -5,7 +5,7 @@ namespace GeorgRinger\NewsFeuser\Domain\Model;
 class News extends \GeorgRinger\News\Domain\Model\News {
 
     /**
-     * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Isb\SrFeuserExtrafelder\Domain\Model\FrontendUser>
+     * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\TYPO3\CMS\Extbase\Domain\Model\FrontendUser>
      * @lazy
      */
     protected $txNewsfeuserUser;

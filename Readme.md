@@ -16,6 +16,8 @@ If you use composer, use either ``"georgringer/news-feuser":"1.0.*`` or ``"typo3
 
 ## Usage
 
+### Rendering the user
+
 After filling out the relation, you are able to output the fe user with
 
 ```
@@ -30,3 +32,9 @@ After filling out the relation, you are able to output the fe user with
     </ul>
 </f:if>
 ```
+
+### ``perUser`` Action
+
+An additional action is added to the plugin which allows to show the news items which belong to a given frontend user. The name of the *GET* argument is defined in the configuration of the extension manager of the extension.
+
+Set it to `user|id` if the GET argument is called ``&user[id]``.
