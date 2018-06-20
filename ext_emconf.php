@@ -1,30 +1,23 @@
 <?php
 
-$EM_CONF[$_EXTKEY] = array(
+$EM_CONF[$_EXTKEY] = [
     'title' => 'FE User for EXT:news',
     'description' => 'Extend news by a relation to a FE User',
     'category' => 'fe',
     'author' => 'Georg Ringer',
     'author_email' => 'mail@ringer.it',
-    'shy' => '',
-    'dependencies' => '',
-    'conflicts' => '',
-    'priority' => '',
-    'module' => '',
     'state' => 'stable',
-    'internal' => '',
     'modify_tables' => 'tx_news_domain_model_news',
     'clearCacheOnLoad' => 1,
-    'lockType' => '',
     'author_company' => 'ringer.it',
-    'version' => '1.1.0',
-    'constraints' => array(
-        'depends' => array(
-            'typo3' => '6.2.10-8.9.99',
-            'news' => '3.2.5-6.9.99'
-        ),
-        'conflicts' => array(),
-        'suggests' => array(),
-    ),
-    'suggests' => array(),
-);
+    'version' => '2.0.0',
+    'constraints' => [
+        'depends' => [
+            'typo3' => '8.7.0-9.9.99',
+            'news' => '6.0.0-7.9.99'
+        ],
+        'conflicts' => [],
+        'suggests' => [],
+    ],
+    'suggests' => [],
+];

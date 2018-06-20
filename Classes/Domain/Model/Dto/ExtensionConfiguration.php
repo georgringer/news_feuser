@@ -25,5 +25,5 @@ class ExtensionConfiguration
     {
         return $this->variable;
     }
-    
+
 }

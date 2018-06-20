@@ -1,11 +1,11 @@
 <?php
 defined('TYPO3_MODE') or die();
 
-$fields = array(
-    'tx_newsfeuser_user' => array(
-        'exclude' => 1,
+$fields = [
+    'tx_newsfeuser_user' => [
+        'exclude' => true,
         'label' => 'LLL:EXT:news_feuser/Resources/Private/Language/locallang.xlf:tx_news_domain_model_news.tx_newsfeuser_user',
-        'config' => array(
+        'config' => [
             'type' => 'group',
             'internal_type' => 'db',
             'allowed' => 'fe_users',
@@ -14,17 +14,17 @@ $fields = array(
             'minitems' => 0,
             'maxitems' => 1010,
             'default' => '',
-            'wizards' => array(
-                'suggest' => array(
+            'wizards' => [
+                'suggest' => [
                     'type' => 'suggest',
-                    'default' => array(
+                    'default' => [
                         'searchWholePhrase' => true
-                    )
-                ),
-            ),
-        )
-    )
-);
+                    ]
+                ],
+            ],
+        ]
+    ]
+];
 
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTCAcolumns('tx_news_domain_model_news', $fields);
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addToAllTCAtypes('tx_news_domain_model_news', 'tx_newsfeuser_user', '', 'after:author');

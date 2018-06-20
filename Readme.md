@@ -4,15 +4,15 @@ This extension extends the news record by a relation to a **FE User**.
 
 ## Requirements
 
-- TYPO3 CMS 6.2-8.2
-- EXT:news 3.2.5+
+- TYPO3 CMS 8.7+
+- EXT:news 6+
 - License: GPL 2
 
 ## Installation
 
 Install the extension as any other extension.
 
-If you use composer, use either ``"georgringer/news-feuser":"1.0.*`` or ``"typo3-ter/news-feuser":"1.0.*``
+If you use composer, use `composer require georgringer/news-feuser`.
 
 ## Usage
 
@@ -21,9 +21,10 @@ If you use composer, use either ``"georgringer/news-feuser":"1.0.*`` or ``"typo3
 After filling out the relation, you are able to output the fe user with
 
 ```
-// Show the full model
+<!-- Show the full model -->
 <f:debug>{newsItem.newsFeUser}</f:debug>
-// Show the names
+
+<!-- Show the names -->
 <f:if condition="{newsItem.newsFeUser}">
     <ul>
     <f:for each="{newsItem.newsFeUser}" as="user">
@@ -33,8 +34,10 @@ After filling out the relation, you are able to output the fe user with
 </f:if>
 ```
 
-### ``perUser`` Action
+### `perUser` Action
 
 An additional action is added to the plugin which allows to show the news items which belong to a given frontend user. The name of the *GET* argument is defined in the configuration of the extension manager of the extension.
 
-Set it to `user|id` if the GET argument is called ``&user[id]``.
+Set it to `user|id` if the GET argument is called `&user[id]`.
+
+Duplicate the template file `List.html` with the name `PerUser.html` which will output the news of the given user.

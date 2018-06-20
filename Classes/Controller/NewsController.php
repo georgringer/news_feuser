@@ -27,15 +27,16 @@ class NewsController extends \GeorgRinger\News\Controller\NewsController {
      */
     public function perUserAction(
         array $overwriteDemand = null
-    ) {
+    )
+    {
         $demand = $this->createDemandObjectFromSettings($this->settings);
         $demand->setActionAndClass(__METHOD__, __CLASS__);
 
-        $assignedValues = array(
+        $assignedValues = [
             'news' => $this->newsRepository->findDemanded($demand),
             'overwriteDemand' => $overwriteDemand,
             'demand' => $demand,
-        );
+        ];
 
         $this->view->assignMultiple($assignedValues);
     }

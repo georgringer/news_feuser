@@ -10,11 +10,11 @@ $GLOBALS['TYPO3_CONF_VARS']['EXT']['news']['switchableControllerActions']['newIt
 
 // Extend the query
 $GLOBALS['TYPO3_CONF_VARS']['EXT']['news']['Domain/Repository/AbstractDemandedRepository.php']['findDemanded']['News.php']
-    = 'EXT:news_feuser/Classes/Hooks/AbstractDemandedRepository.php:GeorgRinger\\NewsFeuser\\Hooks\\AbstractDemandedRepository->modify';
+    = \GeorgRinger\NewsFeuser\Hooks\AbstractDemandedRepository::class . '->modify';
 
 // Update flexforms
 $GLOBALS['TYPO3_CONF_VARS']['EXT']['news']['Hooks/BackendUtility.php']['updateFlexforms']['news_feuser']
-    = 'GeorgRinger\\NewsFeuser\\Hooks\\BackendUtility->update';
+    = \GeorgRinger\NewsFeuser\Hooks\BackendUtility::class .'->update';
 
 $GLOBALS['TYPO3_CONF_VARS']['EXT']['news']['GeorgRinger\\News\\Hooks\\PageLayoutView']['extensionSummary']['news_feuser']
-    = 'GeorgRinger\\NewsFeuser\\Hooks\\PageLayoutView->extensionSummary';
+    = \GeorgRinger\NewsFeuser\Hooks\PageLayoutView::class . '->extensionSummary';

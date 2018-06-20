@@ -28,7 +28,7 @@ class AbstractDemandedRepository
 
     public function __construct()
     {
-        $this->extensionConfiguration = GeneralUtility::makeInstance('GeorgRinger\\NewsFeuser\\Domain\\Model\\Dto\\ExtensionConfiguration');
+        $this->extensionConfiguration = GeneralUtility::makeInstance(ExtensionConfiguration::class);
     }
 
     /**
