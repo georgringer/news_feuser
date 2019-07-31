@@ -31,6 +31,10 @@ class NewsController extends \GeorgRinger\News\Controller\NewsController {
     {
         $demand = $this->createDemandObjectFromSettings($this->settings);
         $demand->setActionAndClass(__METHOD__, __CLASS__);
+        
+        if ($this->settings['disableOverrideDemand'] != 1 && $overwriteDemand !== null) {
+            $demand = $this->overwriteDemandObject($demand, $overwriteDemand);
+        }
 
         $assignedValues = [
             'news' => $this->newsRepository->findDemanded($demand),
